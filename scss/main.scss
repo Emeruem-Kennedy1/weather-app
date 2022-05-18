@@ -1,0 +1,134 @@
+// create a variable for shadow colors
+$shadow-color: rgb(34, 34, 34);
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background:url('https://images.unsplash.com/photo-1594538756542-8c88bda491c5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjQ4Mzl8MHwxfHNlYXJjaHwyfHxOaWdlcmlhJTIwY2l0eXxlbnwwfHx8fDE2NTI3NDkyMDA&ixlib=rb-1.2.1&q=80&w=1080') rgba(46, 51, 104, 0.578);
+    background-size: cover;
+    background-blend-mode: multiply;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #fff;
+    user-select: none;
+    text-align: center;
+    scroll-behavior: smooth;
+}
+
+.main-container{
+    width: 100%;
+    height: 100%;
+    
+    .image-container{
+        width: 100%;
+        height: 70vh;
+        padding: 6rem;
+        .time-and-location{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .clock{
+                display: flex;
+                flex-direction: row;
+            }
+        }
+    }
+}
+
+
+
+.container{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgba(48,54,72,0.8);
+    // padding: 3rem;
+    .day-info{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        // margin-bottom: 20px;
+        padding: 2rem;
+        height: 30vh;
+    }
+
+    .Day{
+        background-color: $shadow-color;
+        padding: 4px 12px 4px 12px;
+        font-size: .8rem;
+        border-radius: 25px;
+    }
+    .today{
+        width: 30%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        
+        img{
+            width: 40%;
+            height: auto;
+            // object-fit: cover;
+        }
+    }
+    .not-today{
+        width: calc(70% / 6);
+    }
+
+    .description{
+        font-size: .8rem;
+        font-weight: 500;
+        margin-top: 10px;
+        text-transform: capitalize;
+    }
+    .temperature{
+        font-size: 1.5rem;
+        margin-top: 10px;
+        font-weight: lighter;
+    }
+}
+
+
+@media screen and (max-width: 600px){
+    body{
+        background-image: url('https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-size: 100vw 70vh;
+    }
+    .container{
+        flex-direction: column;
+        .day-info{
+            margin-bottom: 0;
+            margin: 0% 10% 0% 10%;
+        }
+        .today{
+            width: 80%;
+            height: 40vh;
+        }
+        .not-today{
+            width: 80%;
+            height: 50%;
+        }
+    }
+}
+
+@media screen and (max-width: 990px ) and (min-width: 600px){
+    .container{
+        // flex-direction: column;
+        .today{
+            width: 100%;
+        }
+        .not-today{
+            width: calc(100% / 6);
+        }
+    }
+}

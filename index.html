@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+
+    <div class="main-container">
+        <div class="image-container">
+
+            <div class="time-and-location">
+                <div class="time">
+                    <div class="clock">
+                        <div class="hour" id="hour" ></div>
+                        <p>:</p>
+                        <div class="minute" id="minute"></div>
+                        <p>:</p>
+                        <div class="second" id="second"></div>
+                    </div>
+                    <p class="date" id="date">Tuesday, 170000 May 2022</p>
+                </div>
+                <div class="location">
+                    <p class="city" id="city">Location:</p>
+                    <p class="country" id="country">Location</p>
+                </div>
+            </div>
+            
+
+        </div>
+
+        <div class="container">
+            <div class="today active day-info">
+                <img id="today-weather-image" src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
+                <div class="second-container">
+                    <span class="Day" id="today">Monday</span>
+                
+                    <p id="today-temp" class="temperature">10°F</p>
+                    <p id="today-weather-description" class="description">Looking fresh</p>
+                </div>
+            </div>
+            <div class="day2 not-today day-info">
+                <span id="day2" class="Day">Monday</span>
+                <img id="day2-weather-image" src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
+                <p id="day2-temp" class="temperature">10°F</p>
+                <p id="day2-weather-description" class="description">Looking fresh</p>
+            </div>
+            <div class="day3 not-today day-info">
+                <span id="day3" class="Day">Monday</span>
+                <img id="day3-weather-image" src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
+                <p id="day3-temp" class="temperature">10°F</p>
+                <p id="day3-weather-description" class="description">Looking fresh</p>
+            </div>
+            <div class="day4 not-today day-info">
+                <span id="day4" class="Day">Monday</span>
+                <img id="day4-weather-image" src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
+                <p id="day4-temp" class="temperature">10°F</p>
+                <p id="day4-weather-description" class="description">Looking fresh</p>
+            </div>
+            <div class="day5 not-today day-info">
+                <span id="day5" class="Day">Monday</span>
+                <img id="day5-weather-image" src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
+                <p id="day5-temp" class="temperature">10°F</p>
+                <p id="day5-weather-description" class="description">Looking fresh</p>
+            </div>
+            <div class="day6 not-today day-info">
+                <span id="day6" class="Day">Monday</span>
+                <img id="day6-weather-image" src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
+                <p id="day6-temp" class="temperature">10°F</p>
+                <p id="day6-weather-description" class="description">Looking fresh</p>
+            </div>
+            <div class="day7 not-today day-info">
+                <span id="day7" class="Day">Monday</span>
+                <img id="day7-weather-image" src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
+                <p id="day7-temp" class="temperature">10°F</p>
+                <p id="day7-weather-description" class="description">Looking fresh</p>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+
+
+   
+    
+    <script src="scripts/clock.js"></script>
+    <script src="scripts/_ids.js"></script>
+    <script src="/scripts/script.js"></script>
+    <script src="config.js"></script>
+    <script src="scripts/find_and_display_image.js"></script>
+    <script src="scripts/_ids.js"></script>
+</body>
+</html>
