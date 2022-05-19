@@ -31,7 +31,7 @@ function complete() {
 // get the current weather data from the openweathermap.org api
 async function getCurrentWeatherData(lat, lon) {
     loading()
-    apuURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${config.MY_API_KEY}&units=metric`;
+    apuURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${keys.MY_API_KEY}&units=metric`;
     // actual API call
     try {
         const response = await fetch(apuURL);

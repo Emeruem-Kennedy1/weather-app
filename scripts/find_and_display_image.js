@@ -5,7 +5,7 @@ async function getImageUrl(city) {
     // get the city name from the input field
     let cityName = city;
 
-    apiURL = `https://api.unsplash.com/search/photos?query=${cityName}&client_id=${config.UNSPLASH_ACCESS_KEY}`;
+    apiURL = `https://api.unsplash.com/search/photos?query=${cityName}&client_id=${keys.UNSPLASH_ACCESS_KEY}`;
     // actual API call
     try {
         const response = await fetch(apiURL);
@@ -33,7 +33,7 @@ async function getImageUrl(city) {
 }
 
 async function getCityName() {
-    apiUrl = `https://ipinfo.io/json?token=${config.IP_INFO_API_KEY}`;
+    apiUrl = `https://ipinfo.io/json?token=${keys.IP_INFO_API_KEY}`;
     // actual API call
     try {
         const response = await fetch(apiUrl);
