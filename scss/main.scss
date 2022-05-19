@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Marvel&display=swap');
+
 // create a variable for shadow colors
 $shadow-color: rgb(34, 34, 34);
 
@@ -26,20 +28,51 @@ body{
         width: 100%;
         height: 70vh;
         padding: 6rem;
-        .time-and-location{
+        
+    }
+    .time-and-location{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 50%;
+        .clock{
             display: flex;
             flex-direction: row;
-            justify-content: space-between;
+            font-size: 3rem;
+            width: 100%;
+            align-items: flex-start;
+            font-weight: 200;
 
-            .clock{
-                display: flex;
-                flex-direction: row;
+            
+        }
+        .location{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            .city{
+                font-size: 2rem;
+                font-weight: 200;
+            }
+            .country{
+                font-size: 1.2rem;
+                font-weight: 200;
             }
         }
+        .time{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            .date{
+                font-size: 1.2rem;
+                font-weight: 200;
+                margin-left: .2rem;
+                padding: 1rem 0rem 0rem 0;
+            }
+        }
+
     }
 }
-
-
 
 .container{
     width: 100%;
@@ -48,7 +81,6 @@ body{
     flex-wrap: wrap;
     justify-content: center;
     background-color: rgba(48,54,72,0.8);
-    // padding: 3rem;
     .day-info{
         display: flex;
         flex-direction: column;
@@ -77,6 +109,10 @@ body{
             width: 40%;
             height: auto;
             // object-fit: cover;
+        }
+
+        .big-loader{
+            width: 30%;
         }
     }
     .not-today{
@@ -113,10 +149,31 @@ body{
         .today{
             width: 80%;
             height: 40vh;
+
+            .big-loader{
+                width: 30%;
+            }
         }
         .not-today{
             width: 80%;
             height: 50%;
+        }
+
+        
+    }
+    .main-container{
+        .time-and-location{
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            height: 40%;
+            .location{
+                align-items: center;
+            }
+            .clock{
+                align-items: center;
+                justify-content: center;
+            }
         }
     }
 }
@@ -126,6 +183,10 @@ body{
         // flex-direction: column;
         .today{
             width: 100%;
+
+            .big-loader{
+                width: 30%;
+            }
         }
         .not-today{
             width: calc(100% / 6);

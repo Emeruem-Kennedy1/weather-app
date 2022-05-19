@@ -35,3 +35,4 @@ var day6WeatherDescription = document.getElementById("day7-weather-description")
 
 var country = document.getElementById("country");
 var city = document.getElementById("city");
+

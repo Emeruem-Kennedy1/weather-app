@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Marvel&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -30,7 +31,7 @@ body {
   padding: 6rem;
 }
 
-.main-container .image-container .time-and-location {
+.main-container .time-and-location {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -41,9 +42,10 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  height: 50%;
 }
 
-.main-container .image-container .time-and-location .clock {
+.main-container .time-and-location .clock {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -51,6 +53,55 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  font-size: 3rem;
+  width: 100%;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  font-weight: 200;
+}
+
+.main-container .time-and-location .location {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.main-container .time-and-location .location .city {
+  font-size: 2rem;
+  font-weight: 200;
+}
+
+.main-container .time-and-location .location .country {
+  font-size: 1.2rem;
+  font-weight: 200;
+}
+
+.main-container .time-and-location .time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.main-container .time-and-location .time .date {
+  font-size: 1.2rem;
+  font-weight: 200;
+  margin-left: .2rem;
+  padding: 1rem 0rem 0rem 0;
 }
 
 .container {
@@ -115,6 +166,10 @@ body {
   height: auto;
 }
 
+.container .today .big-loader {
+  width: 30%;
+}
+
 .container .not-today {
   width: calc(70% / 6);
 }
@@ -153,15 +208,47 @@ body {
     width: 80%;
     height: 40vh;
   }
+  .container .today .big-loader {
+    width: 30%;
+  }
   .container .not-today {
     width: 80%;
     height: 50%;
+  }
+  .main-container .time-and-location {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 40%;
+  }
+  .main-container .time-and-location .location {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .main-container .time-and-location .clock {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
 @media screen and (max-width: 990px) and (min-width: 600px) {
   .container .today {
     width: 100%;
+  }
+  .container .today .big-loader {
+    width: 30%;
   }
   .container .not-today {
     width: calc(100% / 6);
