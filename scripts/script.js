@@ -36,7 +36,7 @@ async function getCurrentWeatherData(lat, lon) {
     try {
         const response = await fetch(apuURL);
         weatherData = await response.json();
-
+        
         // extract the weather data from the response
         extractWeatherInformation(weatherData);
     } catch (error) {
@@ -44,22 +44,27 @@ async function getCurrentWeatherData(lat, lon) {
     };
 };
 
-// fuction to check what to do if there is a succesful request. we should call the getCurrentWeatherData function
-const succesfulRequest = (position) => {
-    let lat = position.coords.latitude;
-    let long = position.coords.longitude;
 
-    // call the getCurrentWeatherData function to get the weather data from the latitude and longitude
-    getCurrentWeatherData(lat, long);
-};
 
-// function to show what to do if there is a failed request 
-const failedRequest = () => {
-    console.error(error);
-};
+async function getCityInformation() {
+    // get city name from ipinfo.io
+    apiUrl = `https://ipinfo.io/json?token=${keys.IP_INFO_API_KEY}`;
+    // actual API call
+    try {
+        const response = await fetch(apiUrl);
+        cityData = await response.json();
+        const [lat,lon] = cityData.loc.split(',');
 
-// attempt getting the user location from the browser using the geolocation API and then call the succesfulRequest function if the request is succesful and the failedRequest function if it fails
-navigator.geolocation.getCurrentPosition(succesfulRequest, failedRequest);
+        // get the weather data for the current day and 7 days after it using the getCurrentWeatherData function
+        getCurrentWeatherData(lat, lon);
+    }
+    catch (error) {
+        console.log(error);
+    }
+}
+
+getCityInformation();
+
 
 
 

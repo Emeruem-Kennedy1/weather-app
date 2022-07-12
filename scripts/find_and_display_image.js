@@ -40,11 +40,9 @@ async function getCityName() {
         cityData = await response.json();
         cityName = cityData.city;
 
-
-
         // get country name from country code
         countryName = getCountryName(cityData.country);
-
+        
         country.innerText = countryName;
         city.innerText = cityName;
         getImageUrl(cityName);
