@@ -5,8 +5,8 @@ The UI is inspired by this image I found while searching google.
 ![](./assets/inspiration.png)
 
 ## How to use
-1. allow the browser to access your location
-2. view the weather information for the day 
+1. Open the app using the url [Weather App](https://mylocationweather.netlify.app/)
+2. view the weather information for the day and the next 6 days
 
 ## features
 - View the weather information for the day 
