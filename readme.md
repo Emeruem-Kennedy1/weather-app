@@ -25,4 +25,4 @@ The UI is inspired by this image I found while searching google.
 
 ## Preview of the App
 
-![](./assets/Final%20Product.png)
+![](./assets//final_design.png)
