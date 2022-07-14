@@ -36,7 +36,41 @@ async function getCurrentWeatherData(lat, lon) {
     try {
         const response = await fetch(apuURL);
         weatherData = await response.json();
-        
+        const hourlyData = [];
+        const timestamp = [];
+        weatherData.hourly.forEach(hour => {
+            hourlyData.push(hour.temp);
+            date = new Date(hour.dt * 1000);
+            timestamp.push(convertToAMPM(date.getHours()) + ' ' + getDayOfTheWeek(hour.dt).slice(0,3));
+        });
+        console.log(hourlyData, timestamp);
+
+        // plot chart using chart.js
+        const chartData = {
+            labels: timestamp.slice(0, 24),
+            datasets: [
+                {
+                    label: 'Temperature(°C)',
+                    data: hourlyData.slice(0, 24),
+                    backgroundColor: [
+                        '#f5f5f5',
+                    ],
+                    borderColor: [
+                        '#f5f5f5',
+                    ],
+                    borderWidth: 1,
+                    // fill: false
+                },
+            ],
+
+        };
+        plotChart(ctx, chartData);
+
+
+
+
+
+
         // extract the weather data from the response
         extractWeatherInformation(weatherData);
     } catch (error) {

@@ -12,7 +12,7 @@ async function getImageUrl(city) {
         imageData = await response.json();
 
         imgUrl = imageData.results[Math.floor(Math.random() * imageData.results.length)].urls.regular;
-        document.body.style.background = "url(" + imgUrl + ") rgba(46, 51, 104, 0.578) no-repeat";
+        document.body.style.background = "url(" + imgUrl + ") rgba(46, 51, 104, 0.678) no-repeat";
         document.body.style.backgroundSize = "cover";
 
         setInterval(() => {
@@ -20,7 +20,7 @@ async function getImageUrl(city) {
             let randomImageUrl = imageData.results[Math.floor(Math.random() * imageData.results.length)].urls.full;
 
             // update the image with the random image url
-            document.body.style.background = "url(" + randomImageUrl + ") rgba(46, 51, 104, 0.578) no-repeat";
+            document.body.style.background = "url(" + randomImageUrl + ") rgba(46, 51, 104, 0.678) no-repeat";
             document.body.style.backgroundSize = "cover";   
         }, 300000); // get a new image every 5 minutes
         // set the image url to the background image of the page
