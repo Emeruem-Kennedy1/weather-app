@@ -14,6 +14,7 @@ The UI is inspired by this image I found while searching google.
 - Display the time and date
 - Display the user location
 - Display the background image of the location the user is in (for example, in the preview image below, the background image is the one for the observatory in thecity of Los Angeles)
+- View 24 hours forecast as a graph
 
 
 ## Tools used
