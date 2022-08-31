@@ -1,8 +1,8 @@
 {
     "name": "Weatherly",
     "short_name": "Weatherly",
-    "start_url": "https://weatherlyloaction.netlify.app/index.html/",
-    "scope": "/",
+    "start_url": "./",
+    "scope": "./",
     "icons": [
       {
         "src": "assets/weather.ico",
