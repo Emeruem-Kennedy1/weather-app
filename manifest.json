@@ -1,7 +1,7 @@
 {
     "name": "Weatherly",
     "short_name": "Weatherly",
-    "start_url": "index.html?utm_source=homescreen",
+    "start_url": "?source=pwa",
     "scope": "/",
     "icons": [
       {
