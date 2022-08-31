@@ -1,3 +1,8 @@
+if ('serviceWorker' in navigator){ 
+    // register service worker 
+    navigator.serviceWorker.register('/service-worker.js'); 
+}
+
 // get the current weather data from the openweathermap.org api
 async function getCurrentWeatherData(lat, lon, displayFunction) {
     loading()

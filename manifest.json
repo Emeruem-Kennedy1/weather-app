@@ -1,0 +1,26 @@
+{
+    "name": "Weatherly",
+    "short_name": "Weatherly",
+    "start_url": "http://127.0.0.1:5501/index.html",
+    "scope": "/",
+    "icons": [
+      {
+        "src": "assets/weather.ico",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "assets/kld.jpeg",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ],
+    "screenshots": [
+        {
+          "src": "assets/final_design.png"
+        }
+    ],
+    "theme_color": "#34a4eb",
+    "background_color": "#333",
+    "display": "standalone"
+  }
